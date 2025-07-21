@@ -1,6 +1,6 @@
 import { useUser } from '@clerk/clerk-react'
 import React, { useEffect, useState } from 'react'
-import { dummyPublishedCreationData } from '../assets/assets'
+import { dummyPublishedCreationData } from '../assets/assets.js'
 import { Heart } from 'lucide-react'
 
 const Community = () => {

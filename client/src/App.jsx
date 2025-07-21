@@ -1,17 +1,24 @@
 import React from 'react'
 import { Route,Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import Layout from './pages/Layout'
-import Dashboard from './pages/Dashboard'
-import WriteArticle from './pages/WriteArticle'
-import BlogTitles from './pages/BlogTitles'
-import GenerateImages from './pages/GenerateImages'
-import RemoveBackground from './pages/RemoveBackground'
-import RemoveObjects from './pages/RemoveObjects'
-import ReviewResume from './pages/ReviewResume'
-import Community from './pages/Community'
+import Home from './pages/Home.jsx'
+import Layout from './pages/Layout.jsx'
+import Dashboard from './pages/Dashboard.jsx'
+import WriteArticle from './pages/WriteArticle.jsx'
+import BlogTitles from './pages/BlogTitles.jsx'
+import GenerateImages from './pages/GenerateImages.jsx'
+import RemoveBackground from './pages/RemoveBackground.jsx'
+import RemoveObjects from './pages/RemoveObjects.jsx'
+import ReviewResume from './pages/ReviewResume.jsx'
+import Community from './pages/Community.jsx'
+import { useAuth } from '@clerk/clerk-react'
+import { useEffect } from 'react'
 
 const App = () => {
+
+  const {getToken}=useAuth()
+  useEffect(()=>{
+    getToken().then((token)=>console.log(token));
+  },[])
   return (
     <div>
       <Routes>

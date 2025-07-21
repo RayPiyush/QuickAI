@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { dummyCreationData } from '../assets/assets'
+import { dummyCreationData } from '../assets/assets.js'
 import { Gem, Sparkles } from 'lucide-react'
 import { Protect } from '@clerk/clerk-react'
-import Creationitem from '../components/Creationitem'
+import Creationitem from '../components/Creationitem.jsx'
 
 const Dashboard = () => {
 
